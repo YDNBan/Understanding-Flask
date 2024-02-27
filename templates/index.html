@@ -1,0 +1,22 @@
+{% extends '_layout.html' %}
+{% block body %}
+<div class="form-style text-center">
+<form method="post" action="/adding">
+    <label>Full Name</label>
+    <input type="text" name="name" id="name">
+    <label>Select Event</label>
+    <select name="event" id="event">
+        <option value=""></option>
+        <option value="DGC Cultural Kickoff">DGC Cultural Kickoff</option>
+        <option value="ASA APIDA Market">ASA APIDA Market</option>
+        <option value="Yard Fest">Yard Fest</option>
+        <option value="UREC Pool Party">UREC Pool Party</option>
+        <option value="Lambda Phi Epsilon, Founders Day">Lambda Phi Epsilon, Founders Day</option>
+    </select>
+    <button type="submit">Submit</button>
+    <div class="error">{{message}}</div>
+</form>
+</div>
+{% endblock %}
+
+

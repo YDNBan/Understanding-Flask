@@ -1,0 +1,30 @@
+{% extends '_layout.html' %}
+{% block body %}
+<h1>Registered Users</h1>
+<div class="register-list container">
+    <table>
+        <thead>
+            <th>Registered Users</th>
+            <th>Event</th>
+            <th></th>
+        </thead>
+        <tbody>
+    {% for name in event_list %}
+    <tr>
+        <td>{{ name }}</td>
+        <td>{{ event_list[name] }}</td>
+        <td>
+            <form action='/remove' method="post">
+                <input type="hidden" name="delete" value="{{ name }}">
+                <button type="submit" class="delete-btn">Delete</button>
+            </form>
+        </td>
+    </tr>
+    {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}
+
+
